@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jayvee Reyes</title>
+    <link href="../asset/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-light: #f4f4f4;
+            --white: #ffffff;
+            --max-width: 1000px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: var(--text-color); background-color: var(--bg-light); }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            background: var(--white);
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+        }
+        section { padding: 60px 0; border-bottom: 1px solid #eee; }
+
+        /* --- HEADER & NAV --- */
+        header { background-color: var(--primary-color); color: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .nav-links a { color: var(--white); font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent-color); }
+        
+        .auth-link { border: 1px solid var(--white); padding: 5px 15px; border-radius: 4px; font-size: 0.9rem; }
+        .auth-link:hover { background: var(--white); color: var(--primary-color) !important; }
+
+        /* --- HERO SECTION --- */
+        .hero { text-align: center; padding: 80px 20px; background-color: var(--white); }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary-color); }
+        .hero h2 { font-size: 1.2rem; color: #777; margin-bottom: 20px; font-weight: normal; }
+        .hero p { max-width: 600px; margin: 0 auto 30px auto; color: #555; }
+        .btn { display: inline-block; background: var(--primary-color); color: var(--white); padding: 10px 25px; border-radius: 5px; transition: background 0.3s; cursor: pointer; border: none; font-size: 1rem; }
+        .btn:hover { background: var(--accent-color); }
+
+        /* --- SECTIONS --- */
+        .section-title { text-align: center; margin-bottom: 40px; color: var(--primary-color); }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background: var(--primary-color); margin: 10px auto 0; }
+        
+        .about-content { display: grid; grid-template-columns: 1fr; gap: 30px; }
+        .skill-card { background: #f9f9f9; padding: 20px; border-left: 4px solid var(--primary-color); }
+        
+        .project-list { display: grid; gap: 30px; }
+        .project-card { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 25px; transition: transform 0.2s; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .project-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .project-title { font-size: 1.25rem; font-weight: bold; color: var(--primary-color); }
+        .project-type { font-size: 0.85rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        .tech-stack { margin-top: 15px; font-size: 0.9rem; color: #666; font-style: italic; }
+
+        .timeline-item { margin-bottom: 30px; padding-left: 20px; border-left: 2px solid #ddd; }
+        
+        /* --- CONTACT FORM STYLES --- */
+        .contact-container { max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary-color); }
+        .form-group input, 
+        .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; font-size: 1rem; }
+        .form-group input:focus, 
+        .form-group textarea:focus { border-color: var(--accent-color); outline: none; }
+        .form-group textarea { height: 150px; resize: vertical; }
+        .btn-full { width: 100%; }
+        
+        .direct-contact { text-align: center; margin-top: 30px; color: #666; font-size: 0.9rem; }
+
+        footer { text-align: center; padding: 30px; font-size: 0.9rem; color: #777; border-top: 1px solid #eee; }
+
+        @media (min-width: 768px) { .about-content { grid-template-columns: 2fr 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Jayvee Reyes</a></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html" class="auth-link">Login</a></li>
+                <li><a href="register.html" class="auth-link">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="home" class="hero">
+            <h1>Jayvee G. Reyes</h1>
+            <h2>Fullstack Developer & C# Specialist</h2>
+            <p>I utilize <strong>C# .NET Core</strong> and <strong>ASP.NET MVC</strong> to help businesses and developers build robust backends.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="bio">
+                    <p>Hi, I’m Jayvee. I am a Web Developer with a passion for turning complex problems into simple, functional code.</p>
+                    <br>
+                    <p>My journey into tech started when I realized that software could do more than just entertain—it could solve real-world logistical problems.</p>
+                </div>
+                <div class="skills">
+                    <div class="skill-card">
+                        <h4>Backend</h4>
+                        <p>C#, ASP.NET Core, MVC Architecture, Entity Framework</p>
+                    </div>
+                    <div style="height: 20px;"></div>
+                    <div class="skill-card">
+                        <h4>Frontend</h4>
+                        <p>HTML5, CSS3, JavaScript, jQuery, Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-list">
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-title">Tourism Website (eTourMoElyu)</span>
+                        <span class="project-type">Academic Project</span>
+                    </div>
+                    <ul>
+                        <li>Architected a full-stack tourism web application using <strong>ASP.NET Core MVC</strong>.</li>
+                        <li>Implemented secure user authentication using <strong>ASP.NET Identity</strong>.</li>
+                    </ul>
+                    <div class="tech-stack">Technologies: C#, ASP.NET Core, SQL Server.</div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-title">Job Portal (FreshPath)</span>
+                        <span class="project-type">Academic Project</span>
+                    </div>
+                    <ul>
+                        <li>Developed a recruitment platform tailored for fresh graduates.</li>
+                        <li>Implemented a search and filtering system for job opportunities.</li>
+                    </ul>
+                    <div class="tech-stack">Technologies: C#, ASP.NET Core, Entity Framework.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <p style="text-align: center; margin-bottom: 30px;">
+                    Have a project in mind? Fill out the form below to send me a direct message.
+                </p>
+                
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="name@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project inquiry, collaboration, etc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="How can I help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-full">Send Message</button>
+                </form>
+
+                <div class="direct-contact">
+                    <p>Or email me directly at: <strong>email@example.com</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Prepared By: Reyes, Jayvee G. &copy; 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
