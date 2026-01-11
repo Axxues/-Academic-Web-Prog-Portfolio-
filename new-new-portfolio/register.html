@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Jayvee's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Jayvee Reyes</div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="register.html" class="active">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- <section>
+            <h1>Join the Developer Newsletter</h1>
+            <p>By signing up, you will receive weekly emails containing C# tips, trickiest bugs I've solved, and updates on my latest projects like the FreshPath Job Portal.</p>
+            
+            <br>
+            <img src="assets/newsletter-graphic.jpg" alt="Graphic design showing email and code icons" style="max-height: 250px;">
+        </section> -->
+
+        <section>
+            <h2>Sign Up Form</h2>
+            <form action="#" method="post">
+                
+                <div>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+
+                <div>
+                    <label for="username">Preferred Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div>
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div>
+                    <label>Interest Level:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="beginner" name="level" value="beginner" checked>
+                        <label for="beginner" style="display:inline; font-weight:normal;">Beginner</label>
+
+                        <input type="radio" id="intermediate" name="level" value="intermediate">
+                        <label for="intermediate" style="display:inline; font-weight:normal;">Intermediate</label>
+
+                        <input type="radio" id="expert" name="level" value="expert">
+                        <label for="expert" style="display:inline; font-weight:normal;">Expert</label>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" style="display:inline; font-weight:normal;">I agree to the terms and privacy policy.</label>
+                </div>
+
+                <button type="submit">Complete Registration</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Jayvee Reyes. All Rights Reserved.</p>
+            <p>Contact: myemail@gmail.com | La Union, Philippines</p>
+        </div>
+    </footer>
+
+</body>
+</html>
