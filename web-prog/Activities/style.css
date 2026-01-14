@@ -1,0 +1,126 @@
+.page-layout {
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "sidebar main main"
+    "sidebar footer footer";
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 50px 1fr 80px;
+  gap: 15px;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  /* background-color: green; */
+}
+
+.sidebar {
+  grid-area: sidebar;
+  /* background-color: rgb(242, 0, 255); */
+}
+
+.main {
+  grid-area: main;
+  /* background-color: red; */
+  margin-left: 50px;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  /* background-color: yellow; */
+  color: white;
+  background: #2d3748;
+}
+
+.horizontal-nav {
+  background: #2d3748;
+  border-radius: 8px;
+  /* height: 99%; */
+}
+
+.horizontal-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-nav li {
+  flex: 1;
+}
+
+.horizontal-nav a{
+  display: block;
+  /* margin-top: 1px; */
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease; 
+  /* height: 100%; */
+  border-radius: 8px;
+}
+
+.horizontal-nav a:hover {
+  background: #667eea;
+}
+
+.horizontal-nav a.active {
+  background: #667eea;
+}
+
+/* ------------------------------------- */
+
+.vertical-nav {
+  background: #2d3748;
+  border-radius: 8px;
+  /* margin: 10px;
+  padding: 10px; */
+  width: 250px;
+}
+
+.vertical-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vertical-nav a{
+  display: block;
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  /* text-align: center; */
+  transition: all 0.3s ease; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.vertical-nav a:hover {
+  background: #667eea;
+  padding-left: 50px;
+}
+
+.vertical-nav a.active {
+  background: #667eea;
+  /* border-left: 4px solid #46bb78; */
+}
+
+.main img {
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.footer img {
+  height: 100px;
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px; */
+}
+
